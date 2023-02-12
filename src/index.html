@@ -2,51 +2,37 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hello Rigo with Vanilla.js</title>
+    <title>¿Que paso Hoy?</title>
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
       integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
     <link rel="shortcut icon" href="./4geeks.ico" />
-    <script>
-      function generarExcusa() {
-        let who = ["The dog", "My grandma", "His turtle", "My bird", "My cat"];
-        let action = ["ate", "peed", "crushed", "broke"];
-        let what = [
-          "my homework",
-          "the keys",
-          "the car",
-          "the food",
-          "the book"
-        ];
-        let when = [
-          "before the class",
-          "right in time",
-          "when I finished",
-          "during my lunch",
-          "while I was praying"
-        ];
-
-        let whoIndex = [Math.floor(Math.random() * who.length)];
-        let actionIndex = [Math.floor(Math.random() * action.length)];
-        let whatIndex = [Math.floor(Math.random() * what.length)];
-        let whenIndex = [Math.floor(Math.random() * when.length)];
-
-        alert(
-          who[whoIndex] +
-            " " +
-            action[actionIndex] +
-            " " +
-            what[whatIndex] +
-            " " +
-            when[whenIndex]
-        );
-      }
-    </script>
+    <link rel="stylesheet" href="style.css" crossorigin="anonymous" />
+    <script src="app.js"></script>
   </head>
+
   <body>
-    <button onclick="generarExcusa()">Generar excusa!</button>
+    <h1 id="Excusa"></h1>
+    <div class="container">
+      <div class="row">
+        <div class="col text-center">
+          <button
+            class="btn btn-light btn-lg btn-position"
+            onclick="generador()"
+          >
+            Generar excusa!
+          </button>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
